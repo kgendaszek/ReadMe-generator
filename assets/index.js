@@ -16,12 +16,37 @@ const questions = () =>{
             name: 'description',
             message: 'Write a description of your project.',
         },
+        {   type: 'input',
+            name: 'installation',
+            message: 'What needs to be installed?',
+        },
+        {   type: 'input',
+            name: 'usage',
+            message: 'What is the usage of the program?',
+
+        },
+        {   type: 'input',
+            name: 'contributers',
+            message:'Who contributed to this project?',
+
+        },
+        {   type: 'input',
+            name: 'contact',
+            message: 'What is your email?',
+
+        },
+        {   type: 'input',
+            name: 'website',
+            message:'What is the link to the deployed program?'
+
+        },
         {
             type: 'list',
             name: 'license',
             message: 'Choose a license.',
             choices: [ 'Apache 2.0', 'BSD3', 'MIT', 'None'],
-        }
+        },
+        
     ])
 };
 
