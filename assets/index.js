@@ -26,13 +26,23 @@ const questions = () =>{
 
         },
         {   type: 'input',
-            name: 'contributers',
-            message:'Who contributed to this project?',
+            name: 'contributing',
+            message:'How can developers contribute to this project?',
 
         },
         {   type: 'input',
-            name: 'contact',
+            name: 'questions',
             message: 'What is your email?',
+
+        },
+        {   type: 'input',
+            name: 'gitHub',
+            message: 'What is your github page?',
+
+        },
+        {   type: 'input',
+            name: 'tests',
+            message:'How can you test your program?'
 
         },
         {   type: 'input',
@@ -54,7 +64,7 @@ const questions = () =>{
 const init = () => {
 questions()
 .then(answers => {
-    fs.writeFileSync('READMETEST.md', generateMarkdown(answers));
+    fs.writeFileSync('./README.md', generateMarkdown(answers));
 })
 };
 

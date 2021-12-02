@@ -19,13 +19,13 @@ function renderLicenseBadge(license) {
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'Apache 2.0'){
-    return '[link to Apache license](https://opensource.org/licenses/Apache-2.0)';
+    return '[Apache license](https://opensource.org/licenses/Apache-2.0)';
   }
   else if (license === 'BSD3'){
-    return '[link to BSD3 license](https://opensource.org/licenses/BSD-3-Claus';
+    return '[BSD3 license](https://opensource.org/licenses/BSD-3-Claus';
   }
   else if (license === 'MIT'){
-    return '[Link to MIT license](https://opensource.org/licenses/MIT)';
+    return '[MIT license](https://opensource.org/licenses/MIT)';
   }
   else {
     return " ";
@@ -38,37 +38,48 @@ function renderLicenseLink(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-  ## Table of Contents
-* [Description](#description)
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributors](#contributors)
-* [Contact](#contact)
-* [Website](#website)
-* [License](#license)
+  ## **Table of Contents**
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Contributing](#Contributing)
+* [Questions](#Questions)
+* [Tests](#Tests)
+* [Website](#Website)
+* [License](#License)
 
-## description
+## **Description**
 ${data.description}
 
-## installation
+## **Installation**
 ${data.installation}
 
-## usage
+## **Usage**
 ${data.usage}
 
-## contributers
-${data.contributers}
+## **Contributing**
+${data.contributing}
 
-## contact
-${data.contact}
+[Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)]
 
-## website
+
+## **Questions**
+Please contact me at ${data.questions} with any questions.
+
+Vist my gitHub page at ${data.gitHub}!
+
+## **Tests**
+${data.tests}
+
+## **Website**
 ${data.website}
 
-## license
-${renderLicenseBadge(data.license)}
+
+## **License**
+### ${renderLicenseBadge(data.license)}
 
 ${renderLicenseLink(data.license)}
+
 `;
 }
 
